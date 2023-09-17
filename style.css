@@ -121,13 +121,11 @@ main .lookup-container h3 {
 }
 
 main .lookup-container input {
-    grid-column: 3 / 5;
+    grid-column: 2 / 6;
     padding: 20px 30px;
     border-radius: 35px;
     font-size: 1.15em;
     border: 1px solid #d7d7d7;
-    margin-bottom: -50px;
-    min-width: 600px;
     position: relative;
 }
 
@@ -145,7 +143,7 @@ main .main-container {
     grid-column: span 3;
     grid-auto-rows: 1fr;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(8,1fr);
     background: transparent;
     padding: 20px 30px;
     padding: 50px 30px 20px 30px;
@@ -153,7 +151,7 @@ main .main-container {
 }
 
 main .main-container .card {
-    grid-column: span 1;
+    grid-column: span 2;
     border-radius: 6px;
     background: #FFF;
     padding: 5px;
@@ -203,13 +201,35 @@ main .main-container ul li {
 
 @media screen and (max-width:1200px) {
     main .main-container .card {
-        grid-column: span 2;
+        grid-column: span 4;
     }
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:780px) {
+    header {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    header h1{
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    header nav {
+        grid-column: span 2;
+        margin: 30px auto;
+    }
+
+    main .background-container h2{
+        font-size: 22px;
+    }
+
+    main .background-container button{
+        padding: 20px 40px;
+    }
+
     main .main-container .card {
-        grid-column: span 1.5;
+        grid-column: span 8;
     }
 }
 
