@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Poppins:wght@200;400;500;600;800&family=Raleway&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEE;
+    font-family: Roboto;
+}
+
+header {
+    background: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding:20px 30px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+header nav {
+    grid-column: end;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+    margin-left:30px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius:4px;
+    border: 1px solid transparent;
+}
+
+header nav a:last-of-type{
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.25s ease;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main .background-container {
+    width: 100%;
+    overflow: hidden;
+    grid-column: span 3;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 30px 60px;
+    gap: 10px;
+}
+
+main .background-container img {
+    width: 100%;
+    filter: grayscale() blur(0.2em);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+main .background-container h2 {
+    color: #fff;
+    grid-column: span 2;
+    grid-row: span 2;
+    text-align: center;
+    max-width:900px;
+    justify-self: center;
+    align-self:center;
+}
+
+main .background-container button {
+    grid-column: span 1;
+    padding: 20px 60px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.25s ease;
+}
+
+main .background-container button:first-of-type {
+    justify-self: end;
+    align-self: start;
+    border: 1px solid transparent;
+    background-color: #fff;
+}
+
+main .background-container button:last-of-type {
+    justify-self: start;
+    align-self: start;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+main .lookup-container {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background: #FFF;
+    padding: 20px 30px;
+    gap: 30px;
+}
+
+main .lookup-container h3 {
+    grid-column: span 6;
+    justify-self: center;
+}
+
+main .lookup-container input {
+    grid-column: 3 / 5;
+    padding: 20px 30px;
+    border-radius: 35px;
+    font-size: 1.15em;
+    border: 1px solid #d7d7d7;
+    margin-bottom: -50px;
+    min-width: 600px;
+    position: relative;
+}
+
+main .lookup-container input::before {
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+main .main-container {
+    grid-column: span 3;
+    grid-auto-rows: 1fr;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background: transparent;
+    padding: 20px 30px;
+    padding: 50px 30px 20px 30px;
+    gap:10px;
+}
+
+main .main-container .card {
+    grid-column: span 1;
+    border-radius: 6px;
+    background: #FFF;
+    padding: 5px;
+    border: 5px solid #FFF;
+}
+
+main .main-container .card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;;
+}
+
+main .main-container .card h4 {
+    font-size: 18px;
+    padding: 0 2px;
+}
+
+main .main-container .card p {
+    font-size: 18px;
+    padding: 2px 2px;
+    letter-spacing: 0.25px;
+    line-height: 1.4;
+    padding: 5px 2px;
+    font-size: 16px;
+}
+
+main .main-container ul li {
+    list-style: none;
+    display: inline-block;
+    background: #c7c7c7;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.black-to-white:hover {
+    background-color: #FFF !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
+
+.white-to-black:hover {
+    background-color: transparent !important;
+    border: 1px solid #FFF !important;
+    color: #FFF !important;
+}
+
+@media screen and (max-width:1200px) {
+    main .main-container .card {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width:760px) {
+    main .main-container .card {
+        grid-column: span 1.5;
+    }
+}
+
