@@ -233,3 +233,45 @@ main .main-container ul li {
     }
 }
 
+@media screen and (max-width:470px) {
+    header nav a {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header h1 {
+        grid-row: span 2;
+    }
+
+    main .background-container img {
+        height: 100%;
+    }
+
+    main .background-container h2{
+        font-size: 20px;
+    }
+
+    main .background-container button{
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    main .background-container h2 {
+        font-size: 18px;
+    }
+
+    main .background-container button {
+        font-size: 12px;
+        margin: auto;
+    }
+
+    main .lookup-container input,h3 {
+        grid-column: span 6;
+    }
+}
+
