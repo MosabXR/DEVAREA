@@ -65,8 +65,8 @@ main .background-container img {
     width: 100%;
     filter: grayscale() blur(0.2em);
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -125,29 +125,47 @@ main .lookup-container input {
     padding: 20px 30px;
     border-radius: 35px;
     font-size: 1.15em;
+    margin-bottom: -50px;
     border: 1px solid #d7d7d7;
     position: relative;
 }
 
 main .lookup-container input::before {
-    content: ' ';
-    width: 100px;
-    height: 100px;
+    content: " ";
+    width: 200px;
+    height: 200px;
+    padding: 5px;
     background-color: red;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -100px;
+    top: -100px;
+    z-index: 100;
 }
 
 main .main-container {
     grid-column: span 3;
-    grid-auto-rows: 1fr;
     display: grid;
     grid-template-columns: repeat(8,1fr);
     background: transparent;
-    padding: 20px 30px;
-    padding: 50px 30px 20px 30px;
-    gap:10px;
+    padding: 50px 150px 20px 150px;
+    gap:20px;
+}
+
+main .main-container ul {
+    grid-column: span 8;
+}
+
+main .main-container ul li {
+    list-style: none;
+    display: inline-block;
+    background: #000;
+    color: #FFF;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.25s ease;
 }
 
 main .main-container .card {
@@ -156,12 +174,28 @@ main .main-container .card {
     background: #FFF;
     padding: 5px;
     border: 5px solid #FFF;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
 
-main .main-container .card img {
-    max-width: 100%;
+main .main-container .card:hover {
+    transform: translateY(-10px);
+}
+
+main .main-container .card .avatar {
+    width: 100%;
+    background-color: #c7c7c7;
     border-radius: 6px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    max-height: 260px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+main .main-container .card .avatar img {
+    max-width: 100%;
 }
 
 main .main-container .card h4 {
@@ -174,17 +208,29 @@ main .main-container .card p {
     padding: 2px 2px;
     letter-spacing: 0.25px;
     line-height: 1.4;
-    padding: 5px 2px;
+    padding: 10px 2px;
     font-size: 16px;
 }
 
-main .main-container ul li {
+main .main-container .card ul {
+    border-top: 1px solid #c7c7c7;
+    padding: 10px 0 0 0;
+}
+
+main .main-container .card ul li {
     list-style: none;
     display: inline-block;
     background: #c7c7c7;
     color: #FFF;
     padding: 5px 10px;
     border-radius: 10px;
+    margin:0;
+}
+
+footer {
+    max-width: 100%;
+    background-color: #FFF;
+    padding: 20px 30px;
 }
 
 .black-to-white:hover {
