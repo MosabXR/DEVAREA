@@ -249,6 +249,10 @@ footer {
     main .main-container .card {
         grid-column: span 4;
     }
+
+    main .main-container {
+        padding: 50px 60px 20px 60px;
+    }
 }
 
 @media screen and (max-width:780px) {
@@ -277,6 +281,16 @@ footer {
     main .main-container .card {
         grid-column: span 8;
     }
+
+    main .main-container ul {
+        margin: 0 auto;
+    }
+
+    main .main-container ul li {
+        padding: 8px 8px;
+        font-size: 0.7em;
+    }
+
 }
 
 @media screen and (max-width:470px) {
@@ -304,6 +318,7 @@ footer {
     main .background-container button{
         padding: 10px 20px;
     }
+    
 }
 
 @media screen and (max-width:400px) {
@@ -319,5 +334,10 @@ footer {
     main .lookup-container input,h3 {
         grid-column: span 6;
     }
+
+    main .main-container {
+        padding: 50px 20px 20px 20px;
+    }
+
 }
 
