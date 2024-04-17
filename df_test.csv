@@ -912,7 +912,7 @@ id,gender,age,hypertension,heart_disease,ever_married,work_type,residence_type,a
 72178,Female,4,0,0,No,children,Urban,71.25,18.8,Unknown,0
 67032,Male,42,0,0,No,Govt_job,Urban,115.21,28.7,Unknown,0
 39784,Female,72,0,0,Yes,Self-employed,Urban,65.12,28.3,never smoked,0
-56156,Other,26,0,0,No,Private,Rural,143.33,22.4,formerly smoked,0
+56156,Male,26,0,0,No,Private,Rural,143.33,22.4,formerly smoked,0
 39637,Female,20,0,0,No,Private,Rural,147.42,26.6,Unknown,0
 53482,Male,32,0,0,No,Self-employed,Rural,56.08,35.9,formerly smoked,0
 71387,Female,66,0,0,Yes,Govt_job,Rural,59.62,32.4,never smoked,0
